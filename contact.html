@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RadioMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            color: white;
+            font-family: inherit;
+            transition: var(--trans-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">RadioMaster</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding" style="padding-top: 160px;">
+            <div class="container">
+                <div class="reveal">
+                    <h1>Get in <span class="text-accent">Touch</span></h1>
+                    <p class="text-muted">Have a question? Our consultants are available 24/7 to provide immediate
+                        support.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="reveal-left">
+                        <div class="glass" style="padding: 40px; border-radius: var(--radius-lg); margin-bottom: 32px;">
+                            <h3 style="margin-bottom: 24px;">Immediate Assistance</h3>
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <div style="display: flex; gap: 16px; align-items: center;">
+                                    <div class="icon-box" style="width: 48px; height: 48px; margin-bottom: 0;">📞</div>
+                                    <div>
+                                        <p style="font-weight: 600;">Phone Support</p>
+                                        <a href="tel:0000000000" class="text-accent">0000000000</a>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 16px; align-items: center;">
+                                    <div class="icon-box" style="width: 48px; height: 48px; margin-bottom: 0;">🕒</div>
+                                    <div>
+                                        <p style="font-weight: 600;">Availability</p>
+                                        <p class="text-muted">Mon-Sun: 24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reveal" style="margin-top: 40px;">
+                            <h3>Common FAQ</h3>
+                            <details
+                                style="margin-top: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                                <summary style="cursor: pointer; font-weight: 500;">How long is a consultation?
+                                </summary>
+                                <p class="text-muted" style="margin-top: 8px; font-size: 0.9rem;">Initial phone
+                                    assessments usually take 10-15 minutes. Detailed troubleshooting sessions may take
+                                    longer depending on complexity.</p>
+                            </details>
+                            <details
+                                style="margin-top: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+                                <summary style="cursor: pointer; font-weight: 500;">Do you work on vintage gear?
+                                </summary>
+                                <p class="text-muted" style="margin-top: 8px; font-size: 0.9rem;">Yes, we have
+                                    specialists specifically for vintage receiver restoration and signal alignment.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="reveal-right">
+                        <form class="glass" style="padding: 40px; border-radius: var(--radius-lg);">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="0000000000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Service Type</label>
+                                <select required>
+                                    <option value="">Select Service...</option>
+                                    <option>Car Radio Activation</option>
+                                    <option>Home Audio Setup</option>
+                                    <option>Technical Support</option>
+                                    <option>Diagnostic Audit</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="5" placeholder="Tell us about your technical challenge..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo"
+                        style="margin-bottom: 20px; display: inline-block;">RadioMaster</a>
+                    <p class="text-muted">Premium radio consultancy and technical support services for the modern
+                        listener.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 20px;">Pages</h4>
+                    <ul class="text-muted" style="display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 20px;">Legal</h4>
+                    <ul class="text-muted" style="display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 20px;">Support</h4>
+                    <p class="text-muted">Phone: <a href="tel:0000000000" class="text-accent">0000000000</a></p>
+                    <p class="text-muted">Hours: 24/7 Support</p>
+                </div>
+            </div>
+            <div class="text-center text-muted"
+                style="padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                &copy; 2026 RadioMaster. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
